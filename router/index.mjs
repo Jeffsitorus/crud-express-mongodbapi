@@ -15,7 +15,9 @@ api.put("/tasks/:id", TaskController.update);
 api.delete("/tasks/:id", TaskController.destroy);
 
 api.get("/blogs", BlogController.index);
+api.get('/blogs/:id', BlogController.show)
 api.post("/blogs", BlogController.store);
+api.put("/blogs/:id", BlogController.update);
 api.delete("/blogs/:id", BlogController.destroy);
 
 export default api;

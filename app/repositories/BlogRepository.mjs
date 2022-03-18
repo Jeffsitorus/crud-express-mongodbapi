@@ -24,6 +24,31 @@ export default class BlogRepository {
     }
   }
 
+  async getBlogById(blogId) {
+    try {
+      const blog = await Blog.findById(blogId);
+
+      return blog;
+    } catch (error) {
+      throw error;
+      return null;
+    }
+  }
+
+  async updateBlog(blogId, body) {
+    try {
+      const result = await Blog.findOneAndUpdate(
+        { _id: blogId },
+        { $set: body }
+      );
+
+      return result;
+    } catch (error) {
+      throw error;
+      return null;
+    }
+  }
+
   async delete(blogId) {
     try {
       const blog = await Blog.findOne({ _id: blogId });
