@@ -1,0 +1,22 @@
+{
+  "name": "crud-express-mongo",
+  "version": "1.0.0",
+  "description": "Crud Express With Mongodb",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --experimental-modules index.mjs  --ignore 'resources/*' --ignore 'public/*'",
+    "start": "node --experimental-modules index.mjs"
+  },
+  "author": "jeff",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
